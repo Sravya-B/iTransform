@@ -8,6 +8,6 @@ public static void main(String args[]) {
 	ApplicationContext context=new ClassPathXmlApplicationContext("com/ques4/bankAccountContext.xml");
 	//BankAccountServiceImpl bankService=(BankAccountServiceImpl) context.getBean(BankAccountServiceImpl.class);
 BankAccountController controller=(BankAccountController)context.getBean("bankController");
-System.out.println(controller.deposit(1, 23456));
+System.out.println(controller.deposit(123, 23456));
 }
 }
