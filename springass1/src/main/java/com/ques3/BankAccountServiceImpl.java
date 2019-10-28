@@ -2,46 +2,48 @@ package com.ques3;
 
 import java.util.List;
 
+import com.ques4.BankAccount;
+
 public class BankAccountServiceImpl implements BankAccountService {
-	List<BankAccount> accountInfo;
-	public double withdraw(long accountId, double balance) {
-		if(accountId==((BankAccount) accountInfo).getAccountId()) {
-		if(balance<((BankAccount) accountInfo).getAccountBalance()) {
-			double withdrawAmount= ((BankAccount) accountInfo).getAccountBalance()-balance;
-			return withdrawAmount;
+	BankAccount bankAccount;
+	double amount=bankAccount.getAccountBalance();
+	long id=bankAccount.getAccountId();
+		public double withdraw(long accountId, double balance) {
+			if(accountId==id) {
+				amount=amount-balance;
+				return amount;
+			}
+			else {
+				return amount;
+			}
 		}
-		return ((BankAccount) accountInfo).getAccountBalance();
+
+		public double deposit(long accountId, double balance) {
+			if(accountId==id) {
+				amount=amount+balance;
+				return amount;
+			}
+			else {
+				return amount;
+				}
 		}
+
+		public double getBalance(long accountId) {
+			if(accountId==id) {
+			return amount;
+			}
 			else {
 				return 0;
 			}
+		}
+
+		public boolean fundTransfer(long fromAccount, long toAccount, double amount) {
+			if(amount<this.amount) {
+			return true;}
+			else {
+				return false;
+			}
+		}
+
 		
-	}
-
-	public double deposit(long accountId, double balance) {
-		if(accountId==((BankAccount) accountInfo).getAccountId()) {
-				double deposit= ((BankAccount) accountInfo).getAccountBalance()+balance;
-				System.out.println("hey");
-				return deposit;
-			
-				
-		}
-		System.out.println("hey");
-		return 0;
-	}
-
-	public double getBalance(long accountId) {
-		if(accountId==((BankAccount) accountInfo).getAccountId()) {
-		return ((BankAccount) accountInfo).getAccountId();}
-		else {return 0;}
-	}
-
-	public boolean fundTransfer(long fromAccount, long toAccount, double amount) {
-		if(amount<((BankAccount) accountInfo).getAccountId()) {
-			return true;
-		}
-		else
-		return false;
-	}
-
 }

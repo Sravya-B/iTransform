@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 public class BankAccountController {
 @Autowired
 BankAccountServiceImpl bankService;
+
 public double withdraw(long accountId, double balance) {
 	return bankService.withdraw(accountId, balance);
 }

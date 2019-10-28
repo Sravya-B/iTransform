@@ -3,10 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
-	<bean id="accountId" class="com.ques3.BankAccountController" autowire="byName">
-	<property name="id" value="12345" />
+	<bean id="accountId" class="com.ques3.BankAccount" autowire="byName">
+	<property name="id" value="123L" />
 	</bean>
-	<bean id="accountBal" class="com.ques3.BankAccountController" autowire="byName">
+	<bean id="accountBal" class="com.ques3.BankAccount" autowire="byName">
 	<property name="accountBalance" value="35346576" />
 	</bean>
 	</beans>

@@ -2,26 +2,19 @@ package com.ques3;
 
 import java.util.List;
 
-public class BankAccountRepositoryImpl implements BankAccountRepository{
-List<BankAccount> accountInfo;
-	public double getBalance(long accountId) {
-		if(accountId==((BankAccount) accountInfo).getAccountId()) {
-		return ((BankAccount) accountInfo).getAccountBalance();
-	}
-		else {
-			return 0;
-		}
-	}
+import com.ques4.BankAccount;
 
+public class BankAccountRepositoryImpl implements BankAccountRepository{
+	BankAccount bankInfo=new BankAccount();
+	public double getBalance(long accountId) {
+		return bankInfo.getAccountBalance();
+	}
 	public double updateBalance(long accountId, double newBalance) {
-		if(accountId==((BankAccount) accountInfo).getAccountId()) {
-			double balance= ((BankAccount) accountInfo).getAccountBalance()+newBalance;
-			return balance;
+		if(accountId==bankInfo.getAccountId()) {
+			return newBalance;}
+		else {
+		return bankInfo.getAccountBalance();
 		}
-			else {
-				return 0;
-			}
-		
 	}
 
 }
