@@ -12,6 +12,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <jdk.version>1.8</jdk.version>
+       <springframework.version>5.1.5.RELEASE</springframework.version>
+      
   </properties>
 
   <dependencies>
@@ -29,19 +32,32 @@
     <artifactId>spring-context</artifactId>
     <version>5.1.5.RELEASE</version>
 </dependency>   
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>5.1.5.RELEASE</version>
+</dependency>
+
 <!-- Spring JDBC Support -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>5.1.5.RELEASE</version>
+			<version>3.0.3.RELEASE</version>
 		</dependency>
 		
 		<!-- MySQL Driver -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.0.5</version>
+			<version>5.1.46</version>
 		</dependency>
-
+<dependency>
+            <groupId>io.spring.platform</groupId>
+            <artifactId>platform-bom</artifactId>
+            <version>2.0.1.RELEASE</version>
+            <type>pom</type>
+            <scope>import</scope>
+  </dependency>
   </dependencies>
 </project>

@@ -16,7 +16,7 @@ public static void main(String[] args) {
 	EmployeeDao employeeDao=(EmployeeDao)context.getBean("employeeDao");
 	int id=new Random().nextInt(6);
 
-	Employee emp=employeeDao.findByEmployeeId(id);
+	Employee emp=employeeDao.findByEmployeeId(5);
 	System.out.println(emp);
 	
 }
