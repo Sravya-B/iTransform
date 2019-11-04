@@ -1,4 +1,4 @@
-package com.sravya.springjdbc.springJdbc;
+package com.sravya.springCoreJdbc;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
