@@ -13,7 +13,7 @@ public class BankAspect {
 	@Before("execution(* com.sravya.springAOP.BankAccountServiceImpl.withdraw(..))")
 	public void beforeCustomer(JoinPoint joinPoint) {
 		System.out.println("@Before is running");
-		System.out.println("@Before the method: "+joinPoint.getSignature().getName());
+		System.out.println("@Before method: "+joinPoint.getSignature().getName());
 	}
 	/*@After("execution(* com.sravya.springAOP02.Customer.customer(..))")
 	public void afterCustomer() {
