@@ -18,10 +18,12 @@ public class BankAccountServiceImpl implements BankAccountService{
 	    }
 	 
 	public double withdraw(long accountId, double balance) throws SQLException{
+		System.out.println("This is withdraw method");
 		jdbcTemplate=new JdbcTemplate(dataSource);
 
 		String sql="update itransform.bankaccount set accountBalance=accountBalance-? where accountId=?";
 				return  jdbcTemplate.update(sql, new Object[] {balance,accountId});
+				
 	}
 public double deposit(long accountId,double balance) {
 	jdbcTemplate=new JdbcTemplate(dataSource);
@@ -33,7 +35,7 @@ public double deposit(long accountId,double balance) {
 	}
 
 	public boolean fundTransfer(long fromAccount, long toAccount, double amount) throws SQLException {
-		if(withdraw(fromAccount,amount)<=500) {
+		if(withdraw(fromAccount,amount)==500) {
 			
 			return false;
 		}
