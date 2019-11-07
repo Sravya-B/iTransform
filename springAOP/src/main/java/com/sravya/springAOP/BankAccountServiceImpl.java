@@ -1,6 +1,7 @@
 package com.sravya.springAOP;
 
 import java.sql.SQLException;
+import java.util.Map;
 
 import javax.sql.DataSource;
 
@@ -9,14 +10,15 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 @Service
 public class BankAccountServiceImpl implements BankAccountService{
-	@Autowired
-	BankAccountRepositoryImpl bankAccountRepositoryImpl;
+
+	private BankAccountRepositoryImpl bankAccountRepositoryImpl;
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplate;
 	 public void setDataSource(DataSource dataSource) {
 	        this.dataSource = dataSource;
+	       
 	    }
-	 
+	
 	public double withdraw(long accountId, double balance) throws SQLException{
 		System.out.println("This is withdraw method");
 		jdbcTemplate=new JdbcTemplate(dataSource);
@@ -26,7 +28,7 @@ public class BankAccountServiceImpl implements BankAccountService{
 				
 	}
 public double deposit(long accountId,double balance) {
-	jdbcTemplate=new JdbcTemplate(dataSource);
+	
 	return bankAccountRepositoryImpl.updateBalance(accountId,balance);
 }
 	public double getBalance(long accountId) {

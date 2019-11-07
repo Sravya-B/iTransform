@@ -8,7 +8,8 @@ import org.springframework.stereotype.Service;
 public class BankAccountRepositoryImpl implements BankAccountRepository {
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplate;
-	 public void setDataSource(DataSource dataSource) {
+
+	public void setDataSource(DataSource dataSource) {
 	        this.dataSource = dataSource;
 	    }
 
