@@ -11,7 +11,7 @@ public class SimpleInterestController {
 	
 @RequestMapping(value="/views/calculate")
 public String calculateSimpleInterest(@RequestParam("principal") double p,@RequestParam("time") double t,@RequestParam("rate")double r,Model m) {
-	System.out.println("hey you!");
+	System.out.println("Simple Interest calculation!!");
 	double SI=(p*t*r)/100;
 	m.addAttribute("calc",SI);
 	
