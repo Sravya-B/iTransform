@@ -23,7 +23,7 @@ public class BankAspect {
 			pointcut="execution(* com.sravya.springAOP.BankAccountController.getBalance(..))",
 			returning="balance")
 	public void afterReturningCustomer(Object balance) {
-		System.out.println("@AfterReturning is running");
+		System.out.println("@AfterReturning is running here");
 		System.out.println("method returned value is "+balance);
 	}
 	@Around("execution(* com.sravya.springAOP.BankAccountController.fundTransfer(..))")
