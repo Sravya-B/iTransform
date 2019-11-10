@@ -11,7 +11,7 @@ public class HelloWorldController {
 
 @RequestMapping(value="/views/helloWorld")
 public String helloWorld() {
-
+System.out.println("Hello World!");
 	return "helloWorld";
 }
 }
