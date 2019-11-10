@@ -24,6 +24,7 @@ public class BankAccountController {
 		
 	}
 	 DataSource dataSource;
+	 @Autowired
  JdbcTemplate jdbcTemplate;
 	 public void setDataSource(DataSource dataSource) {
 	        this.dataSource = dataSource;

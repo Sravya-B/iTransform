@@ -11,7 +11,7 @@ public class App
     {
     	ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("com/sravya/springAOP/applicationContext.xml");
     	   BankAccountController bankAccount=(BankAccountController) context.getBean("bankAccount");
-    System.out.println(bankAccount.withdraw(1001, 20));
+  System.out.println(bankAccount.withdraw(1001, 20));
     System.out.println(bankAccount.getBalance(1001));
     bankAccount.deposit(1001, 2000);
     //bankAccount.getBalance(1001);
