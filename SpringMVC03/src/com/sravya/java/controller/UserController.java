@@ -9,7 +9,7 @@ public class UserController {
 
 @RequestMapping(value="/views/logIn")	
 public String validUser(@ModelAttribute("user") User user) {
-	if((user.uname).equals("user") && ((user.pwd).equals("root"))) {
+	if((user.getUname()).equals("user") && ((user.getPwd()).equals("root"))) {
 	return "success";
 }
 	else {
