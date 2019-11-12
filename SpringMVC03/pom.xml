@@ -4,7 +4,7 @@
   <artifactId>SpringMVC03</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-    <name>SpringMVC02</name>
+    <name>SpringMVC03</name>
   <url>http://maven.apache.org</url>
 
   <properties>
